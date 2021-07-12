@@ -1,0 +1,15 @@
+11-07-21
+DucHieu
+
+how to log in to server:
+username: admin
+pass: server 
+
+how to edit game's info:
+client
+username: admin
+pass: database
+
+how to login to client
+username: a
+pass: 1
