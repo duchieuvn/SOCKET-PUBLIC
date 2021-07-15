@@ -4,19 +4,13 @@ from tkinter import messagebox
 from tkinter import ttk
 from tkinter import *
 from tkinter.ttk import *
-LARGE_FONT = ("verdana", 13,"bold")
-
-'''
-2.1.1
-
-add score table to home page view
-'''
 
 import socket
 import threading
 import pyodbc
 
-TRUONG_HOSTNAME='LAPTOP-QGJASAVO'
+LARGE_FONT = ("verdana", 13,"bold")
+
 HIEU_HOSTNAME="MON-PC"
 HOST = "127.0.0.1"
 PORT = 65432
@@ -462,8 +456,7 @@ class SoccerNews_Admin(tk.Tk):
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
 
-        self.icon=PhotoImage(file='soccer-ball.png')
-        self.iconphoto(False,self.icon)
+        #self.iconbitmap('soccer-ball.ico')
         self.title("Soccer Sever")
         self.geometry("500x200")
         self.protocol("WM_DELETE_WINDOW", self.on_closing)
@@ -537,7 +530,6 @@ class StartPage(tk.Frame):
         self.label_notice.grid(row=3,column=1)
         self.entry_pswd.grid(row=2,column=1)
         self.entry_user.grid(row=1,column=1)
-
 
 class HomePage(tk.Frame):
     def __init__(self, parent, controller):

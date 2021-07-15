@@ -785,6 +785,7 @@ server_address = (HOST, PORT)
 
 client.connect(server_address)
 
+
 app = SoccerNews_App()
 
 
