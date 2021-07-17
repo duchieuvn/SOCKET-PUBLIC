@@ -12,15 +12,4 @@ client.connect( (HOST, SERVER_PORT) )
 print("client address:",client.getsockname())
 
 
-li = [1,2,2]
-
-for item in li:
-    client.sendall(item)
-    client.recv(1024)
-
-endMessage = "end"
-client.sendall(endMessage.encode(FORMAT))
-
-
-
 input()

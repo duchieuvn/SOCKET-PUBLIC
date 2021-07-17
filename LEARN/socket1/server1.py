@@ -19,15 +19,5 @@ conn, addr = s.accept()
 print("client address:",addr)
 print("conn:",conn.getsockname())
 
-li = []
-
-msg = None 
-while msg != "end":
-    msg = conn.recv(1024)
-    conn.sendall(msg)
-    li.append(msg)
-    
-
-print(li)
 
 input()
