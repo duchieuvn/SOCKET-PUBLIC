@@ -12,7 +12,8 @@ try:
     client.connect( (HOST, SERVER_PORT) )
     print("client address:",client.getsockname())
 
-    client.recv(1024)
+
+    client.sendall(bytes(34))
     
 except:
     print("Error")

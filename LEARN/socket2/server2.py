@@ -17,9 +17,17 @@ print("server:", HOST, SERVER_PORT)
 print("Waiting for Client")
 conn, addr = s.accept()
 
-print("client address:",addr)
-print("conn:",conn.getsockname())
+print("Client", addr, "connected")
 
+msg = None
+while msg != "x":
+    try:
+        msg = int(conn.recv(1024))
+        print("client ",addr, "says", msg)
+        print("conn:",conn.getsockname())
+    
+    except:
+        print("Error")
 
 
 
