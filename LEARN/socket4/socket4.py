@@ -1,15 +1,18 @@
 import pyodbc
 
-SERVER = 'MON-PC\SQLEXPRESS'
-DATABASE = 'Socket_Account'
 
 #print(pyodbc.drivers())
 
-cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};\
-                        SERVER=' + SERVER + ';DATABASE= ' + DATABASE +'; \
-                        UID=dh; PWD=123456;')
-
-#DRIVER={SQL Server}; SERVER=TestServer; Database=TestDatabase; UID=UserID; PWD=Password;')
+conx = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=MON-ASUS\SQLEXPRESS; Database=Socket_Account; UID=dh; PWD=123456;')
 
 
-#ODBC Driver 17 for SQL Server
+
+# cursor = conx.cursor()
+# for row in cursor.execute("select username from Account"):
+#     print(row)
+
+# cursor.execute("insert Account values ('dh', '123')")
+# conx.commit()
+
+# conx.close()
+
